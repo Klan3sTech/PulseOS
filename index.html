@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PulseOS</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    background:linear-gradient(90deg,#ff3b3b,#3b82f6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px;
+    background:
+    radial-gradient(circle at top left,#ff3b3b55,transparent 40%),
+    radial-gradient(circle at bottom right,#3b82f655,transparent 40%);
+}
+
+.hero-content h1{
+    font-size:72px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    color:#cbd5e1;
+    max-width:800px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#ff3b3b,#3b82f6);
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:1px solid #3b82f6;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:#3b82f620;
+}
+
+.section{
+    padding:100px 10%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:40px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1f2937;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#3b82f6;
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.download{
+    text-align:center;
+    background:#111827;
+}
+
+.download-box{
+    max-width:600px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    background:#1e293b;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Pulse<span>OS</span></div>
+
+    <nav>
+        <a href="#features">Особенности</a>
+        <a href="#download">Скачать</a>
+        <a href="#about">О проекте</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>PulseOS</h1>
+
+        <p>
+            Современный Linux-дистрибутив на базе Arch Linux
+            с KDE Plasma и собственным пакетным менеджером puls.
+        </p>
+
+        <div class="buttons">
+            <a href="#" class="btn btn-primary">Скачать ISO</a>
+            <a href="#" class="btn btn-secondary">GitHub</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="features">
+
+    <h2>Особенности</h2>
+
+    <div class="features">
+
+        <div class="card">
+            <h3>Arch Linux</h3>
+            <p>Основа системы построена на Arch Linux и archiso.</p>
+        </div>
+
+        <div class="card">
+            <h3>KDE Plasma</h3>
+            <p>Современный и красивый рабочий стол.</p>
+        </div>
+
+        <div class="card">
+            <h3>Calamares</h3>
+            <p>Графический установщик для быстрой установки системы.</p>
+        </div>
+
+        <div class="card">
+            <h3>puls</h3>
+            <p>Собственный пакетный менеджер для установки программ.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section download" id="download">
+
+    <h2>Загрузка</h2>
+
+    <div class="download-box">
+
+        <h3>PulseOS Alpha</h3>
+
+        <p style="margin-top:15px;">
+            Тестовая версия для ознакомления с проектом.
+        </p>
+
+        <br>
+
+        <a href="#" class="btn btn-primary">
+            Скачать ISO
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section" id="about">
+
+    <h2>О проекте</h2>
+
+    <p style="max-width:900px;margin:auto;text-align:center;color:#cbd5e1;">
+        PulseOS — экспериментальный Linux-дистрибутив,
+        объединяющий гибкость Arch Linux, рабочий стол KDE Plasma
+        и собственную систему распространения программ через пакетный менеджер puls.
+    </p>
+
+</section>
+
+<footer>
+    © 2026 PulseOS Project
+</footer>
+
+</body>
+</html>
